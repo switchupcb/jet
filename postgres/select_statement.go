@@ -55,7 +55,7 @@ type SelectStatement interface {
 	OFFSET(offset int64) SelectStatement
 	// OFFSET_e can be used when an integer expression is needed as offset, otherwise OFFSET can be used
 	OFFSET_e(offset IntegerExpression) SelectStatement
-	FETCH_FIRST(count IntegerExpression) fetchExpand
+	FETCH_FIRST(count IntegerExpression) FetchExpand
 	FOR(lock RowLock) SelectStatement
 
 	UNION(rhs SelectStatement) SetStatement
@@ -167,10 +167,10 @@ func (s *selectStatementImpl) OFFSET_e(offset IntegerExpression) SelectStatement
 	return s
 }
 
-func (s *selectStatementImpl) FETCH_FIRST(count IntegerExpression) fetchExpand {
+func (s *selectStatementImpl) FETCH_FIRST(count IntegerExpression) FetchExpand {
 	s.Fetch.Count = count
 
-	return fetchExpand{
+	return FetchExpand{
 		selectStatement: s,
 	}
 }
@@ -214,17 +214,17 @@ func readableTablesToSerializerList(tables []ReadableTable) []jet.Serializer {
 	return ret
 }
 
-type fetchExpand struct {
+type FetchExpand struct {
 	selectStatement *selectStatementImpl
 }
 
-func (f fetchExpand) ROWS_ONLY() SelectStatement {
+func (f FetchExpand) ROWS_ONLY() SelectStatement {
 	f.selectStatement.Fetch.WithTies = false
 
 	return f.selectStatement
 }
 
-func (f fetchExpand) ROWS_WITH_TIES() SelectStatement {
+func (f FetchExpand) ROWS_WITH_TIES() SelectStatement {
 	f.selectStatement.Fetch.WithTies = true
 
 	return f.selectStatement

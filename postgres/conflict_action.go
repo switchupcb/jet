@@ -2,18 +2,18 @@ package postgres
 
 import "github.com/switchupcb/jet/v2/notinternal/jet"
 
-type conflictAction interface {
+type ConflictAction interface {
 	jet.Serializer
-	WHERE(condition BoolExpression) conflictAction
+	WHERE(condition BoolExpression) ConflictAction
 }
 
 // SET creates conflict action for ON_CONFLICT clause
-func SET(assigments ...ColumnAssigment) conflictAction {
-	conflictAction := updateConflictActionImpl{}
-	conflictAction.doUpdate = jet.KeywordClause{Keyword: "DO UPDATE"}
-	conflictAction.Serializer = jet.NewSerializerClauseImpl(&conflictAction.doUpdate, &conflictAction.set, &conflictAction.where)
-	conflictAction.set = assigments
-	return &conflictAction
+func SET(assigments ...ColumnAssigment) ConflictAction {
+	ConflictAction := updateConflictActionImpl{}
+	ConflictAction.doUpdate = jet.KeywordClause{Keyword: "DO UPDATE"}
+	ConflictAction.Serializer = jet.NewSerializerClauseImpl(&ConflictAction.doUpdate, &ConflictAction.set, &ConflictAction.where)
+	ConflictAction.set = assigments
+	return &ConflictAction
 }
 
 type updateConflictActionImpl struct {
@@ -24,7 +24,7 @@ type updateConflictActionImpl struct {
 	where    jet.ClauseWhere
 }
 
-func (u *updateConflictActionImpl) WHERE(condition BoolExpression) conflictAction {
+func (u *updateConflictActionImpl) WHERE(condition BoolExpression) ConflictAction {
 	u.where.Condition = condition
 	return u
 }

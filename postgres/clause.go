@@ -6,14 +6,14 @@ import (
 )
 
 type OnConflict interface {
-	ON_CONSTRAINT(name string) conflictTarget
-	WHERE(indexPredicate BoolExpression) conflictTarget
-	conflictTarget
+	ON_CONSTRAINT(name string) ConflictTarget
+	WHERE(indexPredicate BoolExpression) ConflictTarget
+	ConflictTarget
 }
 
-type conflictTarget interface {
+type ConflictTarget interface {
 	DO_NOTHING() InsertStatement
-	DO_UPDATE(action conflictAction) InsertStatement
+	DO_UPDATE(action ConflictAction) InsertStatement
 }
 
 type OnConflictClause struct {
@@ -24,12 +24,12 @@ type OnConflictClause struct {
 	do               jet.Serializer
 }
 
-func (o *OnConflictClause) ON_CONSTRAINT(name string) conflictTarget {
+func (o *OnConflictClause) ON_CONSTRAINT(name string) ConflictTarget {
 	o.constraint = name
 	return o
 }
 
-func (o *OnConflictClause) WHERE(indexPredicate BoolExpression) conflictTarget {
+func (o *OnConflictClause) WHERE(indexPredicate BoolExpression) ConflictTarget {
 	o.whereClause.Condition = indexPredicate
 	return o
 }
@@ -39,7 +39,7 @@ func (o *OnConflictClause) DO_NOTHING() InsertStatement {
 	return o.insertStatement
 }
 
-func (o *OnConflictClause) DO_UPDATE(action conflictAction) InsertStatement {
+func (o *OnConflictClause) DO_UPDATE(action ConflictAction) InsertStatement {
 	o.do = action
 	return o.insertStatement
 }
