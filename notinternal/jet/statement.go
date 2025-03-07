@@ -3,8 +3,9 @@ package jet
 import (
 	"context"
 	"database/sql"
-	"github.com/go-jet/jet/v2/qrm"
 	"time"
+
+	"github.com/switchupcb/jet/v2/qrm"
 )
 
 // Statement is common interface for all statements(SELECT, INSERT, UPDATE, DELETE, LOCK)

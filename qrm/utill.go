@@ -7,10 +7,10 @@ import (
 	"strings"
 	"time"
 
-	"github.com/go-jet/jet/v2/qrm/internal"
 	"github.com/google/uuid"
 	"github.com/switchupcb/jet/v2/notinternal/utils/must"
 	"github.com/switchupcb/jet/v2/notinternal/utils/strslice"
+	"github.com/switchupcb/jet/v2/qrm/internal"
 )
 
 var scannerInterfaceType = reflect.TypeOf((*sql.Scanner)(nil)).Elem()

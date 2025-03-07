@@ -11,14 +11,14 @@ import (
 	"testing"
 	"time"
 
-	"github.com/go-jet/jet/v2/qrm"
-	"github.com/go-jet/jet/v2/stmtcache"
 	"github.com/google/go-cmp/cmp"
 	"github.com/google/uuid"
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 	"github.com/switchupcb/jet/v2/notinternal/jet"
 	"github.com/switchupcb/jet/v2/notinternal/utils/throw"
+	"github.com/switchupcb/jet/v2/qrm"
+	"github.com/switchupcb/jet/v2/stmtcache"
 )
 
 // UnixTimeComparer will compare time equality while ignoring time zone

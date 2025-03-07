@@ -5,8 +5,8 @@ import (
 	"database/sql"
 	"fmt"
 
-	"github.com/go-jet/jet/v2/generator/metadata"
-	"github.com/go-jet/jet/v2/qrm"
+	"github.com/switchupcb/jet/v2/generator/metadata"
+	"github.com/switchupcb/jet/v2/qrm"
 )
 
 // postgresQuerySet is dialect query set for PostgreSQL

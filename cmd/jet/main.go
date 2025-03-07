@@ -11,19 +11,19 @@ import (
 	"github.com/switchupcb/jet/v2/notinternal/utils/errfmt"
 	"github.com/switchupcb/jet/v2/notinternal/utils/strslice"
 
-	"github.com/go-jet/jet/v2/generator/metadata"
-	sqlitegen "github.com/go-jet/jet/v2/generator/sqlite"
-	"github.com/go-jet/jet/v2/generator/template"
-	"github.com/go-jet/jet/v2/mysql"
-	postgres2 "github.com/go-jet/jet/v2/postgres"
-	"github.com/go-jet/jet/v2/sqlite"
+	"github.com/switchupcb/jet/v2/generator/metadata"
+	sqlitegen "github.com/switchupcb/jet/v2/generator/sqlite"
+	"github.com/switchupcb/jet/v2/generator/template"
+	"github.com/switchupcb/jet/v2/mysql"
 	"github.com/switchupcb/jet/v2/notinternal/jet"
+	postgres2 "github.com/switchupcb/jet/v2/postgres"
+	"github.com/switchupcb/jet/v2/sqlite"
 
-	mysqlgen "github.com/go-jet/jet/v2/generator/mysql"
-	postgresgen "github.com/go-jet/jet/v2/generator/postgres"
 	_ "github.com/go-sql-driver/mysql"
 	_ "github.com/lib/pq"
 	_ "github.com/mattn/go-sqlite3"
+	mysqlgen "github.com/switchupcb/jet/v2/generator/mysql"
+	postgresgen "github.com/switchupcb/jet/v2/generator/postgres"
 )
 
 var (

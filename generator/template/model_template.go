@@ -7,9 +7,9 @@ import (
 	"strings"
 	"time"
 
-	"github.com/go-jet/jet/v2/generator/metadata"
 	"github.com/google/uuid"
 	"github.com/jackc/pgtype"
+	"github.com/switchupcb/jet/v2/generator/metadata"
 	"github.com/switchupcb/jet/v2/notinternal/utils/dbidentifier"
 )
 

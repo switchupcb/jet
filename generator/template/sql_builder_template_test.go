@@ -1,9 +1,10 @@
 package template
 
 import (
-	"github.com/go-jet/jet/v2/generator/metadata"
-	"github.com/stretchr/testify/require"
 	"testing"
+
+	"github.com/stretchr/testify/require"
+	"github.com/switchupcb/jet/v2/generator/metadata"
 )
 
 func TestToGoEnumValueIdentifier(t *testing.T) {

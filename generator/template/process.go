@@ -10,7 +10,7 @@ import (
 
 	"github.com/switchupcb/jet/v2/notinternal/utils/filesys"
 
-	"github.com/go-jet/jet/v2/generator/metadata"
+	"github.com/switchupcb/jet/v2/generator/metadata"
 	"github.com/switchupcb/jet/v2/notinternal/jet"
 )
 

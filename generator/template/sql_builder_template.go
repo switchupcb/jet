@@ -7,7 +7,7 @@ import (
 	"strings"
 	"unicode"
 
-	"github.com/go-jet/jet/v2/generator/metadata"
+	"github.com/switchupcb/jet/v2/generator/metadata"
 	"github.com/switchupcb/jet/v2/notinternal/utils/dbidentifier"
 )
 

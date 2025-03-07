@@ -7,12 +7,12 @@ Jet currently supports PostgreSQL, MySQL, MariaDB and SQLite. Future releases wi
 
 Use the command bellow to add jet as a dependency into go.mod project:
 
-	$ go get -u github.com/go-jet/jet/v2
+	$ go get -u github.com/switchupcb/jet/v2
 
 Jet generator can be installed in one of the following ways:
 
  1. (Go1.16+) Install jet generator using go install:
-    go install github.com/go-jet/jet/v2/cmd/jet@latest
+    go install github.com/switchupcb/jet/v2/cmd/jet@latest
 
  2. Install jet generator to GOPATH/bin folder:
     cd $GOPATH/src/ && GO111MODULE=off go get -u github.com/go-jet/jet/cmd/jet
@@ -38,7 +38,7 @@ Before we can write SQL queries in Go, we need to import generated SQL builder a
 
 To write postgres SQL queries we import:
 
-	. "github.com/go-jet/jet/v2/postgres" // Dot import is used so that Go code resemble as much as native SQL. It is not mandatory.
+	. "github.com/switchupcb/jet/v2/postgres" // Dot import is used so that Go code resemble as much as native SQL. It is not mandatory.
 
 Then we can write the SQL query:
 

@@ -4,9 +4,9 @@ import (
 	"database/sql"
 	"fmt"
 
-	"github.com/go-jet/jet/v2/generator/metadata"
-	"github.com/go-jet/jet/v2/generator/template"
-	"github.com/go-jet/jet/v2/sqlite"
+	"github.com/switchupcb/jet/v2/generator/metadata"
+	"github.com/switchupcb/jet/v2/generator/template"
+	"github.com/switchupcb/jet/v2/sqlite"
 )
 
 // GenerateDSN generates jet files using dsn connection string
