@@ -45,15 +45,15 @@ type SelectStatement interface {
 	WHERE(expression BoolExpression) SelectStatement
 	GROUP_BY(groupByClauses ...GroupByClause) SelectStatement
 	HAVING(boolExpression BoolExpression) SelectStatement
-	WINDOW(name string) windowExpand
+	WINDOW(name string) WindowExand
 	ORDER_BY(orderByClauses ...OrderByClause) SelectStatement
 	LIMIT(limit int64) SelectStatement
 	OFFSET(offset int64) SelectStatement
 	FOR(lock RowLock) SelectStatement
 	LOCK_IN_SHARE_MODE() SelectStatement
 
-	UNION(rhs SelectStatement) setStatement
-	UNION_ALL(rhs SelectStatement) setStatement
+	UNION(rhs SelectStatement) SetStatement
+	UNION_ALL(rhs SelectStatement) SetStatement
 
 	AsTable(alias string) SelectTable
 }
@@ -124,9 +124,9 @@ func (s *selectStatementImpl) HAVING(boolExpression BoolExpression) SelectStatem
 	return s
 }
 
-func (s *selectStatementImpl) WINDOW(name string) windowExpand {
+func (s *selectStatementImpl) WINDOW(name string) WindowExand {
 	s.Window.Definitions = append(s.Window.Definitions, jet.WindowDefinition{Name: name})
-	return windowExpand{selectStatement: s}
+	return WindowExand{selectStatement: s}
 }
 
 func (s *selectStatementImpl) ORDER_BY(orderByClauses ...OrderByClause) SelectStatement {
@@ -160,11 +160,11 @@ func (s *selectStatementImpl) AsTable(alias string) SelectTable {
 
 //-----------------------------------------------------
 
-type windowExpand struct {
+type WindowExand struct {
 	selectStatement *selectStatementImpl
 }
 
-func (w windowExpand) AS(window ...jet.Window) SelectStatement {
+func (w WindowExand) AS(window ...jet.Window) SelectStatement {
 	if len(window) == 0 {
 		return w.selectStatement
 	}

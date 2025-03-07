@@ -5,7 +5,7 @@ import (
 	"github.com/switchupcb/jet/v2/notinternal/utils/is"
 )
 
-type onConflict interface {
+type OnConflict interface {
 	ON_CONSTRAINT(name string) conflictTarget
 	WHERE(indexPredicate BoolExpression) conflictTarget
 	conflictTarget
@@ -16,7 +16,7 @@ type conflictTarget interface {
 	DO_UPDATE(action conflictAction) InsertStatement
 }
 
-type onConflictClause struct {
+type OnConflictClause struct {
 	insertStatement  InsertStatement
 	constraint       string
 	indexExpressions []jet.ColumnExpression
@@ -24,27 +24,27 @@ type onConflictClause struct {
 	do               jet.Serializer
 }
 
-func (o *onConflictClause) ON_CONSTRAINT(name string) conflictTarget {
+func (o *OnConflictClause) ON_CONSTRAINT(name string) conflictTarget {
 	o.constraint = name
 	return o
 }
 
-func (o *onConflictClause) WHERE(indexPredicate BoolExpression) conflictTarget {
+func (o *OnConflictClause) WHERE(indexPredicate BoolExpression) conflictTarget {
 	o.whereClause.Condition = indexPredicate
 	return o
 }
 
-func (o *onConflictClause) DO_NOTHING() InsertStatement {
+func (o *OnConflictClause) DO_NOTHING() InsertStatement {
 	o.do = jet.Keyword("DO NOTHING")
 	return o.insertStatement
 }
 
-func (o *onConflictClause) DO_UPDATE(action conflictAction) InsertStatement {
+func (o *OnConflictClause) DO_UPDATE(action conflictAction) InsertStatement {
 	o.do = action
 	return o.insertStatement
 }
 
-func (o *onConflictClause) Serialize(statementType jet.StatementType, out *jet.SQLBuilder, options ...jet.SerializeOption) {
+func (o *OnConflictClause) Serialize(statementType jet.StatementType, out *jet.SQLBuilder, options ...jet.SerializeOption) {
 	if is.Nil(o.do) {
 		return
 	}

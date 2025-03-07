@@ -12,7 +12,7 @@ type InsertStatement interface {
 	QUERY(selectStatement SelectStatement) InsertStatement
 	DEFAULT_VALUES() InsertStatement
 
-	ON_CONFLICT(indexExpressions ...jet.ColumnExpression) onConflict
+	ON_CONFLICT(indexExpressions ...jet.ColumnExpression) OnConflict
 	RETURNING(projections ...Projection) InsertStatement
 }
 
@@ -42,7 +42,7 @@ type insertStatementImpl struct {
 	Insert        jet.ClauseInsert
 	ValuesQuery   jet.ClauseValuesQuery
 	DefaultValues jet.ClauseOptional
-	OnConflict    onConflictClause
+	OnConflict    OnConflictClause
 	Returning     jet.ClauseReturning
 }
 
@@ -78,8 +78,8 @@ func (is *insertStatementImpl) RETURNING(projections ...jet.Projection) InsertSt
 	return is
 }
 
-func (is *insertStatementImpl) ON_CONFLICT(indexExpressions ...jet.ColumnExpression) onConflict {
-	is.OnConflict = onConflictClause{
+func (is *insertStatementImpl) ON_CONFLICT(indexExpressions ...jet.ColumnExpression) OnConflict {
+	is.OnConflict = OnConflictClause{
 		insertStatement:  is,
 		indexExpressions: indexExpressions,
 	}
