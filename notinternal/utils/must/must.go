@@ -3,7 +3,7 @@ package must
 import (
 	"reflect"
 
-	"github.com/go-jet/jet/v2/notinternal/utils/is"
+	"github.com/switchupcb/jet/v2/notinternal/utils/is"
 )
 
 // BeTrue panics when condition is false

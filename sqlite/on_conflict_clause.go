@@ -1,8 +1,8 @@
 package sqlite
 
 import (
-	"github.com/go-jet/jet/v2/notinternal/jet"
-	"github.com/go-jet/jet/v2/notinternal/utils/is"
+	"github.com/switchupcb/jet/v2/notinternal/jet"
+	"github.com/switchupcb/jet/v2/notinternal/utils/is"
 )
 
 type onConflict interface {

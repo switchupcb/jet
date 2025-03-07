@@ -3,8 +3,8 @@ package sqlite
 import (
 	"testing"
 
-	"github.com/go-jet/jet/v2/notinternal/jet"
-	"github.com/go-jet/jet/v2/notinternal/testutils"
+	"github.com/switchupcb/jet/v2/notinternal/jet"
+	"github.com/switchupcb/jet/v2/notinternal/testutils"
 )
 
 var table1Col1 = IntegerColumn("col1")

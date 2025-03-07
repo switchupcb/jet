@@ -8,10 +8,10 @@ import (
 	"strings"
 	"text/template"
 
-	"github.com/go-jet/jet/v2/notinternal/utils/filesys"
+	"github.com/switchupcb/jet/v2/notinternal/utils/filesys"
 
 	"github.com/go-jet/jet/v2/generator/metadata"
-	"github.com/go-jet/jet/v2/notinternal/jet"
+	"github.com/switchupcb/jet/v2/notinternal/jet"
 )
 
 // ProcessSchema will process schema metadata and constructs go files using generator Template

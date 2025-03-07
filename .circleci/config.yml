@@ -140,7 +140,7 @@ jobs:
 
       - run:
           name: Running tests
-          command:  gotestsum --junitfile $TEST_RESULTS/report.xml --format testname   -- -tags postgres -coverprofile=cover.out  -covermode=atomic -coverpkg=github.com/go-jet/jet/v2/postgres/...,github.com/go-jet/jet/v2/mysql/...,github.com/go-jet/jet/v2/sqlite/...,github.com/go-jet/jet/v2/qrm/...,github.com/go-jet/jet/v2/generator/...,github.com/go-jet/jet/v2/notinternal/...,github.com/go-jet/jet/v2/stmtcache/... ./...
+          command:  gotestsum --junitfile $TEST_RESULTS/report.xml --format testname   -- -tags postgres -coverprofile=cover.out  -covermode=atomic -coverpkg=github.com/go-jet/jet/v2/postgres/...,github.com/go-jet/jet/v2/mysql/...,github.com/go-jet/jet/v2/sqlite/...,github.com/go-jet/jet/v2/qrm/...,github.com/go-jet/jet/v2/generator/...,github.com/switchupcb/jet/v2/notinternal/...,github.com/go-jet/jet/v2/stmtcache/... ./...
 
       - run:
           name: Running tests with statement caching enabled

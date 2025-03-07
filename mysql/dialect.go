@@ -3,7 +3,7 @@ package mysql
 import (
 	"fmt"
 
-	"github.com/go-jet/jet/v2/notinternal/jet"
+	"github.com/switchupcb/jet/v2/notinternal/jet"
 )
 
 // Dialect is implementation of MySQL dialect for SQL Builder serialisation.

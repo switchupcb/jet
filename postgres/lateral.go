@@ -1,6 +1,6 @@
 package postgres
 
-import "github.com/go-jet/jet/v2/notinternal/jet"
+import "github.com/switchupcb/jet/v2/notinternal/jet"
 
 // LATERAL derived tables constructor from select statement
 func LATERAL(selectStmt SelectStatement) lateralImpl {

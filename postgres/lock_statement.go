@@ -1,6 +1,6 @@
 package postgres
 
-import "github.com/go-jet/jet/v2/notinternal/jet"
+import "github.com/switchupcb/jet/v2/notinternal/jet"
 
 // TableLockMode is a type of possible SQL table lock
 type TableLockMode string

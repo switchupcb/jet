@@ -8,9 +8,9 @@ import (
 	"time"
 
 	"github.com/go-jet/jet/v2/generator/metadata"
-	"github.com/go-jet/jet/v2/notinternal/utils/dbidentifier"
 	"github.com/google/uuid"
 	"github.com/jackc/pgtype"
+	"github.com/switchupcb/jet/v2/notinternal/utils/dbidentifier"
 )
 
 // Model is template for model files generation

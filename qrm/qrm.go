@@ -7,7 +7,7 @@ import (
 	"fmt"
 	"reflect"
 
-	"github.com/go-jet/jet/v2/notinternal/utils/must"
+	"github.com/switchupcb/jet/v2/notinternal/utils/must"
 )
 
 // ErrNoRows is returned by Query when query result set is empty

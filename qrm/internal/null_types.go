@@ -8,7 +8,7 @@ import (
 	"strconv"
 	"time"
 
-	"github.com/go-jet/jet/v2/notinternal/utils/min"
+	"github.com/switchupcb/jet/v2/notinternal/utils/min"
 )
 
 var (

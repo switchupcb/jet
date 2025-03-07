@@ -4,8 +4,8 @@ import (
 	"reflect"
 	"strings"
 
-	"github.com/go-jet/jet/v2/notinternal/utils/dbidentifier"
-	"github.com/go-jet/jet/v2/notinternal/utils/must"
+	"github.com/switchupcb/jet/v2/notinternal/utils/dbidentifier"
+	"github.com/switchupcb/jet/v2/notinternal/utils/must"
 )
 
 // SerializeClauseList func

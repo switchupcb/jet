@@ -1,6 +1,6 @@
 package mysql
 
-import "github.com/go-jet/jet/v2/notinternal/jet"
+import "github.com/switchupcb/jet/v2/notinternal/jet"
 
 // This functions can be used, instead of its method counterparts, to have a better indentation of a complex condition
 // in the Go code and in the generated SQL.

@@ -11,9 +11,9 @@ import (
 	"time"
 	"unicode"
 
-	"github.com/go-jet/jet/v2/notinternal/3rdparty/pq"
-	"github.com/go-jet/jet/v2/notinternal/utils/is"
 	"github.com/google/uuid"
+	"github.com/switchupcb/jet/v2/notinternal/3rdparty/pq"
+	"github.com/switchupcb/jet/v2/notinternal/utils/is"
 )
 
 // SQLBuilder generates output SQL

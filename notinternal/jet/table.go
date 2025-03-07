@@ -1,6 +1,6 @@
 package jet
 
-import "github.com/go-jet/jet/v2/notinternal/utils/is"
+import "github.com/switchupcb/jet/v2/notinternal/utils/is"
 
 // SerializerTable interface
 type SerializerTable interface {

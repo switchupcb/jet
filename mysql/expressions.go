@@ -1,6 +1,6 @@
 package mysql
 
-import "github.com/go-jet/jet/v2/notinternal/jet"
+import "github.com/switchupcb/jet/v2/notinternal/jet"
 
 // Expression is common interface for all expressions.
 // Can be Bool, Int, Float, String, Date, Time or Timestamp expressions.

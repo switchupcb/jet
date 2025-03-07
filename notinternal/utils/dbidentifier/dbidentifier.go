@@ -4,7 +4,7 @@ import (
 	"strings"
 	"unicode"
 
-	"github.com/go-jet/jet/v2/notinternal/3rdparty/snaker"
+	"github.com/switchupcb/jet/v2/notinternal/3rdparty/snaker"
 )
 
 // ToGoIdentifier converts database identifier to Go identifier.

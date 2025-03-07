@@ -4,7 +4,7 @@ import (
 	"strings"
 	"time"
 
-	"github.com/go-jet/jet/v2/notinternal/utils/throw"
+	"github.com/switchupcb/jet/v2/notinternal/utils/throw"
 )
 
 // Date creates time from t string

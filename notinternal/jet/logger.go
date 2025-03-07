@@ -71,7 +71,7 @@ func (q QueryInfo) Caller() (file string, line int, function string) {
 		}
 
 		funcDetails := runtime.FuncForPC(pc)
-		if !strings.Contains(funcDetails.Name(), "github.com/go-jet/jet/v2/notinternal") {
+		if !strings.Contains(funcDetails.Name(), "github.com/switchupcb/jet/v2/notinternal") {
 			function = funcDetails.Name()
 			return
 		}

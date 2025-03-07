@@ -3,7 +3,7 @@ package sqlite
 import (
 	"testing"
 
-	"github.com/go-jet/jet/v2/notinternal/testutils"
+	"github.com/switchupcb/jet/v2/notinternal/testutils"
 )
 
 func TestInvalidSelect(t *testing.T) {
