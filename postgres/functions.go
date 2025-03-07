@@ -1,7 +1,7 @@
 package postgres
 
 import (
-	"github.com/go-jet/jet/v2/internal/jet"
+	"github.com/go-jet/jet/v2/notinternal/jet"
 )
 
 // This functions can be used, instead of its method counterparts, to have a better indentation of a complex condition

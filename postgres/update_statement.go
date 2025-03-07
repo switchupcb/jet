@@ -1,7 +1,7 @@
 package postgres
 
 import (
-	"github.com/go-jet/jet/v2/internal/jet"
+	"github.com/go-jet/jet/v2/notinternal/jet"
 )
 
 // UpdateStatement is interface of SQL UPDATE statement

@@ -1,7 +1,7 @@
 package sqlite
 
 import (
-	"github.com/go-jet/jet/v2/internal/jet"
+	"github.com/go-jet/jet/v2/notinternal/jet"
 )
 
 // RowLock is interface for SELECT statement row lock types

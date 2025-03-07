@@ -1,9 +1,10 @@
 package mysql
 
 import (
-	"github.com/go-jet/jet/v2/internal/jet"
-	"github.com/go-jet/jet/v2/internal/testutils"
 	"testing"
+
+	"github.com/go-jet/jet/v2/notinternal/jet"
+	"github.com/go-jet/jet/v2/notinternal/testutils"
 )
 
 var table1Col1 = IntegerColumn("col1")

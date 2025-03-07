@@ -1,7 +1,7 @@
 package mysql
 
 import (
-	"github.com/go-jet/jet/v2/internal/jet"
+	"github.com/go-jet/jet/v2/notinternal/jet"
 )
 
 // RawStatement creates new sql statements from raw query and optional map of named arguments

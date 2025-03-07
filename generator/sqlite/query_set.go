@@ -7,7 +7,7 @@ import (
 	"strings"
 
 	"github.com/go-jet/jet/v2/generator/metadata"
-	"github.com/go-jet/jet/v2/internal/utils/semantic"
+	"github.com/go-jet/jet/v2/notinternal/utils/semantic"
 	"github.com/go-jet/jet/v2/qrm"
 )
 

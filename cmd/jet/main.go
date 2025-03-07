@@ -5,16 +5,17 @@ package main
 import (
 	"flag"
 	"fmt"
-	"github.com/go-jet/jet/v2/internal/utils/errfmt"
-	"github.com/go-jet/jet/v2/internal/utils/strslice"
 	"os"
 	"strings"
+
+	"github.com/go-jet/jet/v2/notinternal/utils/errfmt"
+	"github.com/go-jet/jet/v2/notinternal/utils/strslice"
 
 	"github.com/go-jet/jet/v2/generator/metadata"
 	sqlitegen "github.com/go-jet/jet/v2/generator/sqlite"
 	"github.com/go-jet/jet/v2/generator/template"
-	"github.com/go-jet/jet/v2/internal/jet"
 	"github.com/go-jet/jet/v2/mysql"
+	"github.com/go-jet/jet/v2/notinternal/jet"
 	postgres2 "github.com/go-jet/jet/v2/postgres"
 	"github.com/go-jet/jet/v2/sqlite"
 

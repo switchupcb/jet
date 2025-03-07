@@ -2,12 +2,13 @@ package template
 
 import (
 	"fmt"
-	"github.com/go-jet/jet/v2/generator/metadata"
-	"github.com/go-jet/jet/v2/internal/utils/dbidentifier"
 	"path/filepath"
 	"slices"
 	"strings"
 	"unicode"
+
+	"github.com/go-jet/jet/v2/generator/metadata"
+	"github.com/go-jet/jet/v2/notinternal/utils/dbidentifier"
 )
 
 // SQLBuilder is template for generating sql builder files

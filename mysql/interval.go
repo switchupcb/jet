@@ -2,11 +2,12 @@ package mysql
 
 import (
 	"fmt"
-	"github.com/go-jet/jet/v2/internal/utils/datetime"
 	"regexp"
 	"time"
 
-	"github.com/go-jet/jet/v2/internal/jet"
+	"github.com/go-jet/jet/v2/notinternal/utils/datetime"
+
+	"github.com/go-jet/jet/v2/notinternal/jet"
 )
 
 type unitType string

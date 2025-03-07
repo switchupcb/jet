@@ -2,8 +2,9 @@ package sqlite
 
 import (
 	"fmt"
-	"github.com/go-jet/jet/v2/internal/jet"
 	"time"
+
+	"github.com/go-jet/jet/v2/notinternal/jet"
 )
 
 // This functions can be used, instead of its method counterparts, to have a better indentation of a complex condition

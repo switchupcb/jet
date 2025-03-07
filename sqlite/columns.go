@@ -1,6 +1,6 @@
 package sqlite
 
-import "github.com/go-jet/jet/v2/internal/jet"
+import "github.com/go-jet/jet/v2/notinternal/jet"
 
 // Column is common column interface for all types of columns.
 type Column = jet.ColumnExpression

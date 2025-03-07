@@ -1,6 +1,6 @@
 package sqlite
 
-import "github.com/go-jet/jet/v2/internal/jet"
+import "github.com/go-jet/jet/v2/notinternal/jet"
 
 // Table is interface for MySQL tables
 type Table interface {

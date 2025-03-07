@@ -4,10 +4,11 @@ import (
 	"database/sql"
 	"database/sql/driver"
 	"fmt"
-	"github.com/go-jet/jet/v2/internal/utils/min"
 	"reflect"
 	"strconv"
 	"time"
+
+	"github.com/go-jet/jet/v2/notinternal/utils/min"
 )
 
 var (

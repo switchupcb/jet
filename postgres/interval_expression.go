@@ -2,11 +2,12 @@ package postgres
 
 import (
 	"fmt"
-	"github.com/go-jet/jet/v2/internal/jet"
-	"github.com/go-jet/jet/v2/internal/utils/datetime"
 	"strconv"
 	"strings"
 	"time"
+
+	"github.com/go-jet/jet/v2/notinternal/jet"
+	"github.com/go-jet/jet/v2/notinternal/utils/datetime"
 )
 
 type quantityAndUnit = float64

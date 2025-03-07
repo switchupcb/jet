@@ -2,7 +2,7 @@ package template
 
 import (
 	"github.com/go-jet/jet/v2/generator/metadata"
-	"github.com/go-jet/jet/v2/internal/jet"
+	"github.com/go-jet/jet/v2/notinternal/jet"
 )
 
 // Template is generator template used for file generation

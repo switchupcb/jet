@@ -1,6 +1,6 @@
 package sqlite
 
-import "github.com/go-jet/jet/v2/internal/jet"
+import "github.com/go-jet/jet/v2/notinternal/jet"
 
 // UNION effectively appends the result of sub-queries(select statements) into single query.
 // It eliminates duplicate rows from its result.

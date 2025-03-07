@@ -1,6 +1,6 @@
 package postgres
 
-import "github.com/go-jet/jet/v2/internal/jet"
+import "github.com/go-jet/jet/v2/notinternal/jet"
 
 // DeleteStatement is interface for PostgreSQL DELETE statement
 type DeleteStatement interface {
